@@ -13,4 +13,8 @@
 #  director_id :integer
 #
 class Movie < ApplicationRecord
+  def director
+  the_dir = Director.where(:id=> self.director_id).first
+  return the_dir
+  end
 end
